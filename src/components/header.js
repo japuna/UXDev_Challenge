@@ -5,7 +5,7 @@ import Toggle from './Toggle'
 export const Header1 = styled.header`
     width: 100%;
     border-radius: 0 0 10px 10px;
-    padding: 3% 0 3% 0;
+    padding: 3% 0 4% 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

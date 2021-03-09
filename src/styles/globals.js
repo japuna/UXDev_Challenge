@@ -20,7 +20,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
         color: ${({ theme }) => theme.textTitle};
         font-size: 1.7em;
         margin-bottom: 1%;
-        font-weight
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 1em;
+        font-weight: 400;
     }
   `;
 

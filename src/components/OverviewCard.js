@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import ColourGreenRed from './ColourGreenRed'
 
 export const CardOverview = styled.div`
     width: 17%;
@@ -33,13 +34,13 @@ const ImageWord = styled.div`
 
 
 
-const OverViewCard = ({ theme, toggleTheme }) => {
+const OverViewCard = ({ info }) => {
   return (
       <CardOverview>
-        <p style ={{flex : "50%"}}>Page Views</p>
-        <img src= {`../imagenes/icon-facebook.svg`} alt ="Social Media" />
-        <h3 style ={{flex : "50%"}}>87</h3>
-        <ImageWord><img style = {{ height: "27%"}} src= {`../imagenes/icon-up.svg`} alt ="Up" />&nbsp;<p>3%</p></ImageWord>
+        <p style ={{flex : "50%"}}>{info.id}</p>
+        <img src= {`../imagenes/icon-${info.name}.svg`} alt ="Social Media" />
+        <h3 style ={{flex : "50%"}}>{info.number}</h3>
+        <ColourGreenRed widthDiv = {"auto"} position = { "flex-end"} image = {info.image} text = { info.q } />
       </CardOverview>
      
   

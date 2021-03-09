@@ -7,8 +7,8 @@ import { GlobalStyles} from './styles/globals';
 import Header from './components/header';
 import CardsFollowers from './components/CardsFollowers';
 import OverView from './components/overView';
+import WindowGraphics from './components/WindowGraphics'
 
-// The function that toggles between themes
 
 export const AnotherColour = styled.div`
   width: 100%;
@@ -26,13 +26,26 @@ export const MarginDiv = styled.div`
 `
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
+  const [showModal, setShowModal] = useState(false);
+  const [followersObj, setFollowers] = useState({
+    name: 'facebook',
+    image: 'up',
+    number: '1987',
+    q: '12',
+    user: '@nathanf'
+
+  });
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
     } else {
       setTheme('light');
     }
+  }
+
+  const showModalFunction = () =>{
+      setShowModal(true);
   }
   
   // Return the layout based on the current theme
@@ -42,9 +55,13 @@ function App() {
         <AnotherColour />
         <MarginDiv>
           <Header  theme = {theme} toggleTheme={toggleTheme}/>
-          <CardsFollowers />
+          <CardsFollowers showFunction = {showModalFunction} setFollowers = { setFollowers }/>
           <OverView />
-        </MarginDiv>  
+        </MarginDiv> 
+        <WindowGraphics 
+            showModal = {showModal} 
+            showFunction = { setShowModal} 
+            followersObj = { followersObj} />  
     </ThemeProvider>
   );
 }
