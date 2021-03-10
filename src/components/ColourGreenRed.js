@@ -1,13 +1,12 @@
+/******************************************************************************************************* 
+This component changes the colour and the image (up or down) in the estadistics. 
+*******************************************************************************************************/
+
+
 import React from 'react'
 import styled from 'styled-components';
 
-export const CardInfo = styled.div`
-    
-
-`;
-
-
-
+//determine which colour shows in the estadistics with a variable; up (green) or down (red) 
 const colorTitles = (image) =>{
   if(image === "up"){
     return( {color: `hsl(163, 72%, 41%)`})
@@ -19,23 +18,26 @@ const colorTitles = (image) =>{
   
 }
 
-
-
-
-
-const ColourGreenRed = ({ widthDiv, position, image, text }) => {
-  let colorFill = colorTitles(image);
-
-  const ImageWord = styled.div`
-    display: flex;
-    justify-content: ${position};
-    align-items: center;
-    width: ${widthDiv};    
-
+const ImageWord = styled.div`
+  display: flex;
+  align-items: center;
 `
 
+const ColourGreenRed = ({ widthDiv, position, image, text }) => {
+  /*
+      receive widthDiv: width of cointainer
+      position: align of the element (center, flex-end)
+      image: string with up or down to change the color
+      text: text inside the container
+  */
+  let colorFill = colorTitles(image); //Colour of text 
+
+  let styleWords ={
+    width: `${widthDiv}`,
+    justifyContent: `${position}` 
+  }
   return (
-          <ImageWord>
+          <ImageWord style = {styleWords}>
             <img style = {{ height: "27%"}} src= {`../imagenes/icon-${image}.svg`} alt ="Movements in followers" />&nbsp;
             <p style = { colorFill }>{text}</p>
           </ImageWord> 

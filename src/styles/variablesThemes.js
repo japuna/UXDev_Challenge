@@ -1,3 +1,8 @@
+/******************************************************************************************************* 
+Variables of each theme. 
+*******************************************************************************************************/
+
+
 export const darkTheme = {
     body: 'hsl(230, 17%, 14%)',
     textTitle: 'hsl(0, 0%, 100%)',
@@ -8,7 +13,8 @@ export const darkTheme = {
     colourCard: 'hsl(228, 28%, 20%)',
     cardOver: 'hsl(228, 41%, 34%)',
     anotherText: 'white',
-    colourSocial:'lightgray;'
+    colourSocial:'lightgray;',
+    colourMobile: 'hsl(232, 16%, 21%)',
   }
   
   export const lightTheme = {
@@ -21,6 +27,7 @@ export const darkTheme = {
     colourCard: 'hsl(227, 47%, 96%)',
     cardOver: 'hsl(232, 9%, 86%)',
     anotherText: 'hsl(228, 12%, 44%)',
-    colourSocial:'hsl(228, 34%, 66%)'
+    colourSocial:'hsl(228, 34%, 66%)',
+    colourMobile: 'hsl(225, 48%, 92%)',
     
   }

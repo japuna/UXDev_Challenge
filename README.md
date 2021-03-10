@@ -1,71 +1,39 @@
-# Getting Started with Create React App
+# UX Developer Challenge - Social media dashboard with theme switcher (MAKING sENSE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is built based on images provided by the client, trying to faithfully reflect the design. In the desktop version, I worked in a laptop (because most of the people use laptop or mobile devices to surf the internet) and I put all the elements in a single screen to avoid scrolling.
 
-## Available Scripts
+This project was created with [Create React App](https://github.com/facebook/create-react-app), with the latest version of React in this moment (17.0.1), with functional components, hooks and [Styled Components](https://styled-components.com/). 
 
-In the project directory, you can run:
+To draw the char in the modal, in the project we use [Recharts](https://recharts.org/en-US/) 
 
-### `npm start`
+I created some objects inside some components to simulate the data that comes froma a database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The dashboard uses the [ThemeProvider] (https://styled-components.com/docs/advanced) that provides the theme to all the other components underneath itself via the context API.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I have preferred not to use css frameworks to better show my skills in vanilla CSS. 
 
-### `npm test`
+## Project structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each component is housed in a separate file, inside the folder called: components. The styled components can be found in the folder Styles. I like o work like that because it is easier to find an error and to read the code.
 
-### `npm run build`
+It's important to describe some important files; it helps us to better understand how the project works.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### styles
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The styled componentes use the theme variable to assign the value of the different styles of each theme. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The media queries define the styles with three breapoints: the first one for cell phones, the second one to tablets and the last one for computers.
 
-### `npm run eject`
+### styles/globals
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This CSS file defines default characteritics like font-body, font sizes, etc. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### styles/variableThemes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+We found here two variables that define our two themes inside the Dashboard: DarkTheme and LightTheme. These variables are objects that define every color, font size inside each theme.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# UXDev_Challenge" 

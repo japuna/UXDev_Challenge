@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
-import { ModalWindow, ModalContainer, InfoEstadistics } from '../styles/modal.js'
-import Estadistics from './estadistics'
-import Charts from './Charts'
+/******************************************************************************************************* 
+Create the modal
+*******************************************************************************************************/
+
+import React from 'react'
+import { ModalWindow, ModalContainer, InfoEstadistics } from '../styles/modal.js'// required styled components
+import Estadistics from './estadistics'//Estadistics of the modal.
+import Charts from './Charts' // chart inside the modal
 import styled from 'styled-components';
 
 const ImageWord = styled.div`
@@ -15,7 +19,16 @@ const ImageWord = styled.div`
 `
 
 const WindowsGraphics = ({showModal, showFunction , followersObj}) => {
+/*
+    showModal: variable that changes the visibility of the modal. It's a state in app.js
+    showFunction: function to change the value of showModal
+    followerobj: this object has all the information to fill the modal. 
+    This information depends of the element in followers that the users has clicked and it's a state in app.js too
 
+
+
+*/
+     //Uppercase the first lleter in name   
     const capital = (cadena) =>{
         let first = cadena.charAt(0);
         first = first.toUpperCase();
@@ -24,10 +37,10 @@ const WindowsGraphics = ({showModal, showFunction , followersObj}) => {
     }
     return (
         <>
-        {showModal ?(<ModalContainer>
+        {showModal ?(<ModalContainer>  
           <ModalWindow id ="window" >
                 <div className = "data">
-                    <a onClick = {()=>{showFunction(false)}} className = "data__exit"><p>X</p></a>
+                    <div onClick = {()=>{showFunction(false)}} className = "data__exit"><p>X</p></div>
                     <h1>{capital (followersObj.name)} followers</h1>
                     <ImageWord ><img style = {{paddingRight: "1%"}} src= {`../imagenes/icon-${followersObj.name}.svg`} 
                     alt ="Social Media"/><p className = "data__nameNetwork" >{followersObj.user}</p></ImageWord>

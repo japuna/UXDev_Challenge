@@ -1,20 +1,12 @@
+/******************************************************************************************************* 
+This component creates the header.
+*******************************************************************************************************/
+
 import React from 'react'
-import styled from 'styled-components';
-import Toggle from './Toggle'
+import {Header1} from '../styles/headerStyles' //required styled components
+import Toggle from './Toggle' // button to toggle the theme
 
-export const Header1 = styled.header`
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    padding: 3% 0 4% 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    p{
-        font-size: 0.8em;
-        font-weight: 700;
-    }
-`;
 const Header = ({ theme, toggleTheme }) => {
   return (
     <Header1>
@@ -22,7 +14,7 @@ const Header = ({ theme, toggleTheme }) => {
                 <h1>Social Media Dashboard</h1>
                 <p>Total Followers: 23,004</p>
             </div>
-            <Toggle theme = {theme} toggleTheme={toggleTheme} />
+            <Toggle  theme = {theme} toggleTheme={toggleTheme} />{/*button to toggle the theme*/ }
      </Header1>   
   
   );
